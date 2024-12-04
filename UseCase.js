@@ -1,11 +1,55 @@
-function EmpAttd(){
-  let attendance = Math.random()
-  const randomnumber=0.5
+//use case 1
+function aborpre() {
+  let randnumber = (Math.random())
+  const  treshold = 0.5  
+  if (randnumber < treshold){
+    
+      console.log("absent")
+      return 0 ;
+  }
+  else {
 
-  if(attendance<randomnumber){
-    console.log("Employee is present")
-  }else{
-    console.log("Employee is absent")
+      console.log("present");
+      return 1 ;
+
   }
 }
-EmpAttd()
+
+// use case 2
+
+function CalculateWages() {
+  let worktype = Math.floor(Math.random()*3);
+  const partTime_work  = 4 
+  const FullTime_work  = 8 
+  const WagesPerHour = 20 
+  let Totalwages ;
+  const absentorpresent = aborpre();
+  switch(absentorpresent){
+      case 1 :
+          switch (worktype){
+              case 0 :
+                  console.log("no work today ")
+                  Totalwages = 0 ;
+                  console.log(Totalwages);
+                  break ;
+          
+              case 1 :
+                  Totalwages = partTime_work * WagesPerHour;
+                  console.log(`Total wages ${Totalwages} `)
+                  break ;
+                  
+              case 2 :
+                  Totalwages = FullTime_work * WagesPerHour;
+                  console.log(`Total wages ${Totalwages} `)
+                  break ;
+          }
+          
+      break 
+      case 0 :
+          console.log("absent .. ");
+
+  }
+
+}
+
+CalculateWages()
