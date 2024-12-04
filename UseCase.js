@@ -14,6 +14,8 @@ function aborpre() {
 
   }
 }
+// use case3
+let totalhours = 0
 
 // use case 2
 
@@ -28,28 +30,30 @@ function CalculateWages() {
       case 1 :
           switch (worktype){
               case 0 :
+                  totalhours=totalhours+0
                   console.log("no work today ")
                   Totalwages = 0 ;
                   console.log(Totalwages);
                   break ;
           
               case 1 :
+                  totalhours=totalhours+4
                   Totalwages = partTime_work * WagesPerHour;
                   console.log(`Total wages ${Totalwages} `)
                   break ;
                   
               case 2 :
+                  totalhours=totalhours+8
                   Totalwages = FullTime_work * WagesPerHour;
                   console.log(`Total wages ${Totalwages} `)
                   break ;
-          }
-          
-      break 
-      case 0 :
-          console.log("absent .. ");
-
+           default:
+            console.log("invalid input");          
+       } 
+     }
   }
 
-}
-
 CalculateWages()
+
+
+console.log(totalhours);
