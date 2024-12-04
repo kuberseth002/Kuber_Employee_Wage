@@ -4,12 +4,12 @@ function aborpre() {
   const  treshold = 0.5  
   if (randnumber < treshold){
     
-      console.log("absent")
+    console.log("absent")
       return 0 ;
   }
   else {
 
-      console.log("present");
+     console.log("present");
       return 1 ;
 
   }
@@ -30,10 +30,10 @@ function CalculateWages() {
       case 1 :
           switch (worktype){
               case 0 :
-                  totalhours=totalhours+0
-                  console.log("no work today ")
+                totalhours=totalhours+0
+                 console.log("no work today ")
                   Totalwages = 0 ;
-                  console.log(Totalwages);
+                 console.log(Totalwages);
                   break ;
           
               case 1 :
@@ -55,5 +55,8 @@ function CalculateWages() {
 
 CalculateWages()
 
-
+// usecase 4
+for(let i =0;i<20;i++){
+  CalculateWages()
+}
 console.log(totalhours);
