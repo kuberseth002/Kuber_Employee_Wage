@@ -56,7 +56,7 @@ function CalculateWages() {
 CalculateWages()
 
 // usecase 4
-for(let i =0;i<20;i++){
+for(let i =0;i<20 && totalhours<=160 ;i++){
   CalculateWages()
 }
 console.log(totalhours);
